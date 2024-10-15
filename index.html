@@ -1,1 +1,433 @@
+Nu Html Checker
+This tool is an ongoing experiment in better HTML checking, and its behavior remains subject to change
 
+Showing results for contents of text-input area
+Checker Input
+Show sourceoutlineimage report
+
+Check by
+text input
+CSS
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.3">
+    <meta name="description" content="Biel Photography - Fotógrafo Profesional">
+    <meta name="keywords" content="Fotografía, Profesional, Arte, Portfolio">
+    <meta name="author" content="Biel">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Biel Photography</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Biel Photography</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Esta es la Sección de bienvenida -->
+        <section>
+            <h2>Bienvenido a Biel Photography</h2>
+            <p><strong>Un instante eterno</strong> y <em>efecto polarizado</em>. Especialista en bodas, retratos y coches.</p>
+            <img src="portfolio_photo.jpg" alt="Retrato Eva" title="Autor de la Fotografía: Biel">
+            <blockquote>
+                "La fotografia es un secreto de un secreto. Cuanto mas te dice, menos sabes“ Diane Arbus
+            </blockquote>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <figure>
+                <img src="wedding.jpg" alt="Fotografía de boda" title="Fotografía de boda por Biel">
+                <figcaption>Boda en Mónaco</figcaption>
+            </figure>
+            <figure>
+                <img src="portrait.jpg" alt="Retrato profesional" title="Retrato en estudio por Biel">
+                <figcaption>Retrato especial</figcaption>
+            </figure>
+        </section>
+
+        <!-- Sobre mí -->
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Soy <strong>Biel</strong>, Nacido en Barcelona,apasionado de la fotografía desde los 9 años. Etc  <em>bodas</em>, <em>retratos</em>.</p>
+            <address>
+                <p>Ubicación: Barcelona, España</p>
+                <p>Email: <a href="mailto:biel.photography@example.com">biel.photography@example.com</a></p>
+                <p>Teléfono: <a href="tel:+34912345678">+34 912 345 678</a></p>
+            </address>
+        </section>
+
+        <!-- Servicios -->
+        <section id="services">
+            <h2>Servicios</h2>
+            <ul>
+                <li>Fotografía de bodas</li>
+                <li>PostuShoot</li>
+                <li>Car Shooting</li>
+            </ul>
+            <details>
+                <summary>Ver más</summary>
+                <p>Para más información sobre nuestros servicios y precios, contáctanos por favor a través del formulario o visita nuestras redes sociales.</p>
+            </details>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contact">
+            <h2>Contacto</h2>
+            <form action="submit_form.php" method="post">
+                <fieldset>
+                    <legend>Información personal</legend>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
+                    
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" pattern="[0-9]{9}" title="Debe contener 9 dígitos" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles del mensaje</legend>
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Motivo del contacto" required>
+                    
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </fieldset>
+
+                <input type="submit" value="Enviar mensaje">
+            </form>
+        </section>
+
+        <!-- Formulario de selección de servicios -->
+        <section id="booking">
+            <h2>Reserva tu sesión</h2>
+            <form action="booking.php" method="post">
+                <label for="service">Selecciona un servicio:</label>
+                <select id="service" name="service" required>
+                    <option value="Fotografía de bodas">Fotografía de bodas</option>
+                    <option value="retrato">Sesión de retratos</option>
+                    <option value="coches">Fotografía de eventos</option>
+                </select>
+
+                <label for="date">Selecciona una fecha:</label>
+                <input type="date" id="date" name="date" min="2024-01-01" required>
+
+                <label for="time">Hora preferida:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="color">Elige el color para tu sesión (opcional):</label>
+                <input type="color" id="color" name="color">
+
+                <input type="submit" value="Reservar">
+            </form>
+        </section>
+
+        <!-- Mapa de (Google Maps) -->
+        <section id="location">
+            <h2>Ubicación</h2>
+            <iframe width="410" height="360" src="https://www.google.com/maps/embed/v1/place?q=Barcelona,+España&key=YOUR_API_KEY" allowfullscreen></iframe>
+        </section>
+
+        <!-- Video corto como Presentación Cinemática -->
+        <section id="video">
+            <h2>Vídeo de presentación</h2>
+            <video controls poster="thumbnail.jpg">
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </section>
+
+        <!-- Blog -->
+        <section id="blog">
+            <h2>Últimas entradas del blog</h2>
+            <article>
+                <h3>Consejos para fotos de boda</h3>
+                <time datetime="2024-01-10">10 de enero de 2024</time>
+                <p>La fotografía de bodas es un arte. Aquí te dejo algunos consejos para que captures los momentos más especiales...</p>
+                <a href="blog_post_1.html">Leer más</a>
+            </article>
+
+            <article>
+                <h3>La importancia de la iluminación en retratos</h3>
+                <time datetime="2024-02-15">15 de febrero de 2024</time>
+                <p>La luz puede hacer o deshacer un retrato. Aprende cómo dominar la iluminación para conseguir retratos impresionantes...</p>
+                <a href="blog_post_2.html">Leer más</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section id="social-media">
+            <h2>Síguenos en redes sociales</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/biel_photography" target="_blank">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/biel_photography" target="_blank">Tiktok</a></li>
+                <li><a href="https://www.pexels.com/biel_photography" target="_blank">Pexels</a></li>
+            </ul>
+        </section>
+        <p>&copy; <span id="current-year"></span>- Biel Photography. Todos los derechos reservados.</p>
+        <script>
+            // obtenemos el año actual y lo mostramos
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        </script>
+        <p><a href="politica-privacidad.html">Política de privacidad</a></p>
+    </footer>
+
+    <!-- Código JavaScript para validar -->
+    <script>
+        // Validación de formulario de contacto
+        document.getElementById('contact').addEventListener('submit', function(event) {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            if (name === "" || email === "" || phone === "") {
+                alert("Por favor, complete todos los campos.");
+                event.preventDefault();
+            }
+        });
+
+        // Mostrar u ocultar detalles en la página de servicios
+        document.querySelector("details").addEventListener("toggle", function() {
+            if (this.open) {
+                console.log("Detalles visibles");
+            } else {
+                console.log("Detalles ocultos");
+            }
+        });
+    </script>
+</body>
+</html>
+
+Use the Message Filtering button below to hide/show particular messages, and to see total counts of errors and warnings.
+Message Filtering
+Error: The first child option element of a select element with a required attribute, and without a multiple attribute, and without a size attribute whose value is greater than 1, must have either an empty value attribute, or must have no text content. Consider either adding a placeholder option label, or adding a size attribute with a value equal to the number of option elements.
+
+From line 111, column 21; to line 111, column 56
+
+          <option value="Fotografía de bodas">Fotogr
+
+Document checking completed.
+
+Source
+<!DOCTYPE html>↩
+<html lang="es">↩
+<head>↩
+    <meta charset="UTF-8">↩
+    <meta name="viewport" content="width=device-width, initial-scale=1.3">↩
+    <meta name="description" content="Biel Photography - Fotógrafo Profesional">↩
+    <meta name="keywords" content="Fotografía, Profesional, Arte, Portfolio">↩
+    <meta name="author" content="Biel">↩
+    <link rel="icon" href="favicon.png">↩
+    <link rel="stylesheet" href="style.css">↩
+    <title>Biel Photography</title>↩
+</head>↩
+<body>↩
+    <header>↩
+        <h1><a href="index.html">Biel Photography</a></h1>↩
+        <nav>↩
+            <ul>↩
+                <li><a href="#portfolio">Portfolio</a></li>↩
+                <li><a href="#about">Sobre mí</a></li>↩
+                <li><a href="#contact">Contacto</a></li>↩
+                <li><a href="#services">Servicios</a></li>↩
+                <li><a href="#blog">Blog</a></li>↩
+            </ul>↩
+        </nav>↩
+    </header>↩
+↩
+    <main>↩
+        <!-- Esta es la Sección de bienvenida -->↩
+        <section>↩
+            <h2>Bienvenido a Biel Photography</h2>↩
+            <p><strong>Un instante eterno</strong> y <em>efecto polarizado</em>. Especialista en bodas, retratos y coches.</p>↩
+            <img src="portfolio_photo.jpg" alt="Retrato Eva" title="Autor de la Fotografía: Biel">↩
+            <blockquote>↩
+                "La fotografia es un secreto de un secreto. Cuanto mas te dice, menos sabes“ Diane Arbus↩
+            </blockquote>↩
+        </section>↩
+↩
+        <!-- Portfolio -->↩
+        <section id="portfolio">↩
+            <h2>Portfolio</h2>↩
+            <figure>↩
+                <img src="wedding.jpg" alt="Fotografía de boda" title="Fotografía de boda por Biel">↩
+                <figcaption>Boda en Mónaco</figcaption>↩
+            </figure>↩
+            <figure>↩
+                <img src="portrait.jpg" alt="Retrato profesional" title="Retrato en estudio por Biel">↩
+                <figcaption>Retrato especial</figcaption>↩
+            </figure>↩
+        </section>↩
+↩
+        <!-- Sobre mí -->↩
+        <section id="about">↩
+            <h2>Sobre mí</h2>↩
+            <p>Soy <strong>Biel</strong>, Nacido en Barcelona,apasionado de la fotografía desde los 9 años. Etc  <em>bodas</em>, <em>retratos</em>.</p>↩
+            <address>↩
+                <p>Ubicación: Barcelona, España</p>↩
+                <p>Email: <a href="mailto:biel.photography@example.com">biel.photography@example.com</a></p>↩
+                <p>Teléfono: <a href="tel:+34912345678">+34 912 345 678</a></p>↩
+            </address>↩
+        </section>↩
+↩
+        <!-- Servicios -->↩
+        <section id="services">↩
+            <h2>Servicios</h2>↩
+            <ul>↩
+                <li>Fotografía de bodas</li>↩
+                <li>PostuShoot</li>↩
+                <li>Car Shooting</li>↩
+            </ul>↩
+            <details>↩
+                <summary>Ver más</summary>↩
+                <p>Para más información sobre nuestros servicios y precios, contáctanos por favor a través del formulario o visita nuestras redes sociales.</p>↩
+            </details>↩
+        </section>↩
+↩
+        <!-- Formulario de contacto -->↩
+        <section id="contact">↩
+            <h2>Contacto</h2>↩
+            <form action="submit_form.php" method="post">↩
+                <fieldset>↩
+                    <legend>Información personal</legend>↩
+                    <label for="name">Nombre:</label>↩
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>↩
+                    ↩
+                    <label for="email">Correo electrónico:</label>↩
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>↩
+                    ↩
+                    <label for="phone">Teléfono:</label>↩
+                    <input type="tel" id="phone" name="phone" placeholder="Tu teléfono" pattern="[0-9]{9}" title="Debe contener 9 dígitos" required>↩
+                </fieldset>↩
+↩
+                <fieldset>↩
+                    <legend>Detalles del mensaje</legend>↩
+                    <label for="subject">Asunto:</label>↩
+                    <input type="text" id="subject" name="subject" placeholder="Motivo del contacto" required>↩
+                    ↩
+                    <label for="message">Mensaje:</label>↩
+                    <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>↩
+                </fieldset>↩
+↩
+                <input type="submit" value="Enviar mensaje">↩
+            </form>↩
+        </section>↩
+↩
+        <!-- Formulario de selección de servicios -->↩
+        <section id="booking">↩
+            <h2>Reserva tu sesión</h2>↩
+            <form action="booking.php" method="post">↩
+                <label for="service">Selecciona un servicio:</label>↩
+                <select id="service" name="service" required>↩
+                    <option value="Fotografía de bodas">Fotografía de bodas</option>↩
+                    <option value="retrato">Sesión de retratos</option>↩
+                    <option value="coches">Fotografía de eventos</option>↩
+                </select>↩
+↩
+                <label for="date">Selecciona una fecha:</label>↩
+                <input type="date" id="date" name="date" min="2024-01-01" required>↩
+↩
+                <label for="time">Hora preferida:</label>↩
+                <input type="time" id="time" name="time" required>↩
+↩
+                <label for="color">Elige el color para tu sesión (opcional):</label>↩
+                <input type="color" id="color" name="color">↩
+↩
+                <input type="submit" value="Reservar">↩
+            </form>↩
+        </section>↩
+↩
+        <!-- Mapa de (Google Maps) -->↩
+        <section id="location">↩
+            <h2>Ubicación</h2>↩
+            <iframe width="410" height="360" src="https://www.google.com/maps/embed/v1/place?q=Barcelona,+España&key=YOUR_API_KEY" allowfullscreen></iframe>↩
+        </section>↩
+↩
+        <!-- Video corto como Presentación Cinemática -->↩
+        <section id="video">↩
+            <h2>Vídeo de presentación</h2>↩
+            <video controls poster="thumbnail.jpg">↩
+                <source src="video.mp4" type="video/mp4">↩
+                Tu navegador no soporta la reproducción de video.↩
+            </video>↩
+        </section>↩
+↩
+        <!-- Blog -->↩
+        <section id="blog">↩
+            <h2>Últimas entradas del blog</h2>↩
+            <article>↩
+                <h3>Consejos para fotos de boda</h3>↩
+                <time datetime="2024-01-10">10 de enero de 2024</time>↩
+                <p>La fotografía de bodas es un arte. Aquí te dejo algunos consejos para que captures los momentos más especiales...</p>↩
+                <a href="blog_post_1.html">Leer más</a>↩
+            </article>↩
+↩
+            <article>↩
+                <h3>La importancia de la iluminación en retratos</h3>↩
+                <time datetime="2024-02-15">15 de febrero de 2024</time>↩
+                <p>La luz puede hacer o deshacer un retrato. Aprende cómo dominar la iluminación para conseguir retratos impresionantes...</p>↩
+                <a href="blog_post_2.html">Leer más</a>↩
+            </article>↩
+        </section>↩
+    </main>↩
+↩
+    <footer>↩
+        <section id="social-media">↩
+            <h2>Síguenos en redes sociales</h2>↩
+            <ul>↩
+                <li><a href="https://www.instagram.com/biel_photography" target="_blank">Instagram</a></li>↩
+                <li><a href="https://www.tiktok.com/biel_photography" target="_blank">Tiktok</a></li>↩
+                <li><a href="https://www.pexels.com/biel_photography" target="_blank">Pexels</a></li>↩
+            </ul>↩
+        </section>↩
+        <p>&copy; <span id="current-year"></span>- Biel Photography. Todos los derechos reservados.</p>↩
+        <script>↩
+            // obtenemos el año actual y lo mostramos↩
+            document.getElementById("current-year").textContent = new Date().getFullYear();↩
+        </script>↩
+        <p><a href="politica-privacidad.html">Política de privacidad</a></p>↩
+    </footer>↩
+↩
+    <!-- Código JavaScript para validar -->↩
+    <script>↩
+        // Validación de formulario de contacto↩
+        document.getElementById('contact').addEventListener('submit', function(event) {↩
+            var name = document.getElementById('name').value;↩
+            var email = document.getElementById('email').value;↩
+            var phone = document.getElementById('phone').value;↩
+            if (name === "" || email === "" || phone === "") {↩
+                alert("Por favor, complete todos los campos.");↩
+                event.preventDefault();↩
+            }↩
+        });↩
+↩
+        // Mostrar u ocultar detalles en la página de servicios↩
+        document.querySelector("details").addEventListener("toggle", function() {↩
+            if (this.open) {↩
+                console.log("Detalles visibles");↩
+            } else {↩
+                console.log("Detalles ocultos");↩
+            }↩
+        });↩
+    </script>↩
+</body>↩
+</html>
+Used the HTML parser.
+
+Total execution time 8 milliseconds.
+
+About this checker • Report an issue • Version: 24.10.10
